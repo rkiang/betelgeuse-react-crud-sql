@@ -1,0 +1,20 @@
+{
+  "name": "pg-api",
+  "version": "1.0.2",
+  "description": "Create, Read, and Delete REACT with PostgreSQL",
+  "main": "server.js",
+  "repository": "https://github.com/lukeschlangen/react-postgres-crd-app.git",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.17.1",
+    "cors": "^2.8.3",
+    "express": "^4.15.2",
+    "pg": "^6.1.5"
+  }
+}
