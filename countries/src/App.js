@@ -63,6 +63,18 @@ class App extends Component {
     )
   }
 
+  removeCountry(id) {
+    const request = new Request(`${url}/remove/${id}`, {
+      method: 'DELETE'
+    });
+  
+    fetch(request)
+      .then(response => {
+        this.getCountries();
+      })
+      .catch(error => console.log(`Error Remove Country Fetch : ${error}`));
+  }
+
   render() {
     return (
       <div className="App">
@@ -76,6 +88,7 @@ class App extends Component {
         <ul>
           {this.state.countries.map(country => (
             <li key={country.id}>{country.country_name} | {country.continent_name} {/* Call as in the database */}
+            <button onClick={event => this.removeCountry(country.id)}>Delete</button>
               </li>
           ))} {/* Like ng-repeat */}
         </ul>
