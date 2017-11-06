@@ -15,6 +15,8 @@ class App extends Component {
     this.updateCountryName = this.updateCountryName.bind(this);
     this.updateContinentName = this.updateContinentName.bind(this); //
     this.addCountry = this.addCountry.bind(this);
+    this.removeCountry = this.removeCountry.bind(this);
+    
   }
 
   componentDidMount() { //like onReady to keep looping for changes
